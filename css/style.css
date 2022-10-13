@@ -22,7 +22,7 @@
 /*******************************************/
 
 body {
-     font-size: 62.5%;
+     font-family: 'Josefin Slab', serif;
 }
 
 
@@ -40,9 +40,9 @@ body {
      background-image: url("images/pexels-artem-podrez-7233131.jpg");
      background-size: cover;
      background-attachment: fixed;
-     font-family: 'Josefin Slab', serif;
+     border-bottom: 20vh solid transparent;
 }
-.introheader, .pageOne span{
+.introheader, .pageOne span, .arrowDown{
      text-align: center;
      -webkit-animation: fadein 4s;
         -moz-animation: fadein 4s;
@@ -54,16 +54,44 @@ body {
      from { opacity: 0; }
      to   { opacity: 1; }
 }
-.arrowDown{
-     height: 255px;
-     width: 255px;
+.learnMoreBtn
+{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     bottom: -50vh;
+     animation-name: learnMoreAppear;
+     animation-duration: 2s;
+     animation-delay: 1s;
+     animation-fill-mode: forwards;
+}
+.learnMore{
+     border: 1px solid white;
+     border-radius: 25px;
+     height: 10vh;
+     width: 180px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.pageOne .line{
+     background-color: white;
+     height: 20vh;
+     width: 1px;
+}
+@keyframes learnMoreAppear{
+     to{bottom: 10vh;}
 }
 /******************************************
 /* Page Two
 /*******************************************/
 .pageTwo{
      display: flex;
-     height: 40vh;
+     justify-content: center;
+     align-items: center;
+     height: 70vh;
 }
 .blockquote{
      position: relative;
@@ -110,14 +138,115 @@ body {
 /* Page Three
 /*******************************************/
 .pageThree{
-     height: 100vh;
+     height: 160vh;
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     background-image: url("images/pexels-artem-podrez-7233131.jpg");
+     background-size: cover;
+     background-attachment: fixed;
+     color: white;
+}
+.pageThree h2{
+     margin: 15vh 0 3vh 0;
+     font-size: 2rem;
+     font-weight: 300;
+}
+.pageThree>.line{
+     border-bottom: 1px solid white;
+     height: 1px;
+     width: 15vw;
+}
+.pageThree h4{
+     margin: 3vh 0 0 0;
+     font-weight: lighter;
+     text-align: center;
+     font-size: 1.2rem;
+}
+.projects{
+     width: 75vw;
+     height: 110vh;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin: 10vh 0 0 0;
+}
+.projectBox{
+     height: 110vh;
+     width: 25vw;
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     justify-content: flex-start;
+}
+.projectPic{
+     height: 70vh;
+     width: 80%;
+}
+.projectline{
+     border-bottom: 1px solid white;
+     height: 1px;
+     width: 15vw;
+     margin: 2vh 0 2vh 0;
+}
+.projectBox .name{
+     margin: 5vh 0 0 0;
+     font-size: 2rem;
+}
+.projectBox .description{
+     font-size: 1.1rem;
+}
+.projectBox button{
+     margin: 2vh 0 0 0;
+     width: 5vw;
+     height: 3vh;
+     color: white;
+     border: 1px solid white;
+     border-radius: 10px;
+     background-color: transparent;
+}
+/******************************************
+/* Page Four
+/*******************************************/
+.pageFour{
+     height: 90vh;
+     display: flex;
+     flex-flow: row;
+     justify-content: center;
+     align-items: center;
+     font-family:'Times New Roman', Times, serif;
+     font-size: 1.2rem;
+     font-weight: 400;
+}
+.p4box1{
+     width: 40%;
+     height: 80vh;
+     display: flex;
+     flex-flow: row wrap;
+}
+.p4box1 div{
+     height: 50%;
+     width: 50%;
      display: flex;
      justify-content: center;
-     margin-top: 10vh;
+     align-items: center;
 }
-.project{
-     height: 70vh;
-     width: 300px;
-     border: 1px solid black;
-     margin: 0 2vw;
+.servicesPic{
+     height: 155px;
+     width: 155px;
+}
+.p4box2>p{
+     margin-left: 5vh;
+}
+.p4box2 span{
+     margin-left: 5vh;
+     font-size: 1.4rem;
+     font-weight: bold;
+}
+.p4box2{
+     width: 40%;
+     height: 80vh;
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
 }
