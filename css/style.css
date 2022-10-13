@@ -37,7 +37,8 @@ body {
      align-items: center;
      color: white;
      font-size: 1.6rem;
-     background: linear-gradient(135deg, hsla(224, 75%, 45%, 1) 0%, hsla(324, 75%, 45%, 1) 100%);
+     background-image: url("/images/pexels-adrien-olichon-2387532.jpg")
+     /*background: linear-gradient(135deg, hsla(224, 75%, 45%, 1) 0%, hsla(324, 75%, 45%, 1) 100%);*/
 }
 .introheader{
      text-align: center;
