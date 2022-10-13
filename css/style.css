@@ -37,11 +37,26 @@ body {
      align-items: center;
      color: white;
      font-size: 1.6rem;
-     background-image: url("/images/pexels-adrien-olichon-2387532.jpg")
-     /*background: linear-gradient(135deg, hsla(224, 75%, 45%, 1) 0%, hsla(324, 75%, 45%, 1) 100%);*/
+     background-image: url("images/pexels-artem-podrez-7233131.jpg");
+     background-size: cover;
+     background-attachment: fixed;
+     font-family: 'Josefin Slab', serif;
 }
-.introheader{
+.introheader, .pageOne span{
      text-align: center;
+     -webkit-animation: fadein 4s;
+        -moz-animation: fadein 4s;
+         -ms-animation: fadein 4s;
+          -o-animation: fadein 4s;
+             animation: fadein 4s;
+}
+@keyframes fadein{
+     from { opacity: 0; }
+     to   { opacity: 1; }
+}
+.arrowDown{
+     height: 255px;
+     width: 255px;
 }
 /******************************************
 /* Page Two
@@ -105,7 +120,4 @@ body {
      width: 300px;
      border: 1px solid black;
      margin: 0 2vw;
-}
-.projectOne{
-     
 }
