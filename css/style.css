@@ -219,24 +219,23 @@ body {
      font-weight: 400;
 }
 .p4box1{
-     width: 40%;
+     width: 40vw;
      height: 80vh;
-}
-.p4box1>div{
      display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-}
-.p4box1 > div div{
-     display: flex;
-     flex-basis: 50%;
+     flex-flow: row wrap;
      justify-content: center;
-     flex-direction: column;
+     align-content: center;
+}
+.p4box1 div{
+     width: 34%;
+     height: 34%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 .servicesPic{
-     height: 155px;
-     width: 155px;
-     border: 1px solid red;
+     height: 165px;
+     width: 165px;
 }
 .p4box2>p{
      margin-left: 5vh;
@@ -247,7 +246,7 @@ body {
      font-weight: bold;
 }
 .p4box2{
-     width: 40%;
+     width: 40vw;
      height: 80vh;
      display: flex;
      flex-flow: column;
@@ -300,19 +299,44 @@ body {
 /* Page Six
 /*******************************************/
 .pageSix{
-     height: 110vh;
+     height: 60vh;
      display: flex;
+     flex-flow: column;
+     align-items: center;
+     justify-content: center;
+     color: gray;
+}
+.pageSix div{
+     width: 10vw;
+     border-bottom: 1px solid gray;
+}
+.pageSix .title{
+     font-size: 2rem;
+}
+.pageSix p{
+     font-size: 1.5rem;
+     text-align: center;
 }
 /******************************************
 /* Page Seven
 /*******************************************/
 .pageSeven{
-     height: 50vh;
+     height: 40vh;
      display: flex;
      flex-flow: column;
      align-items: center;
+     justify-content: center;
      background-image: url("images/pexels-artem-podrez-7233131.jpg");
      background-size: cover;
      background-attachment: fixed;
      color: white;
+}
+.pageSeven p{
+     font-size: 1rem;
+     font-weight: lighter;
+     opacity: 0.7;
+}
+.pageSeven img{
+     height: 75px;
+     width: 75px;
 }
