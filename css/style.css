@@ -221,19 +221,22 @@ body {
 .p4box1{
      width: 40%;
      height: 80vh;
-     display: flex;
-     flex-flow: row wrap;
 }
-.p4box1 div{
-     height: 50%;
-     width: 50%;
+.p4box1>div{
      display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+}
+.p4box1 > div div{
+     display: flex;
+     flex-basis: 50%;
      justify-content: center;
-     align-items: center;
+     flex-direction: column;
 }
 .servicesPic{
      height: 155px;
      width: 155px;
+     border: 1px solid red;
 }
 .p4box2>p{
      margin-left: 5vh;
@@ -249,4 +252,67 @@ body {
      display: flex;
      flex-flow: column;
      justify-content: center;
+}
+/******************************************
+/* Page Five
+/*******************************************/
+.pageFive{
+     height: 80vh;
+     display: flex;
+     flex-flow: row;
+     justify-content: center;
+     align-items: center;
+     background-image: url("images/pexels-artem-podrez-7233131.jpg");
+     background-size: cover;
+     background-attachment: fixed;
+     color: white;
+}
+.boxTwo, .boxOne{
+     width: 50vw;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.content{
+     display: flex;
+     flex-flow: column;
+     margin: 0 0 0 15vw;
+}
+.content div{
+     width: 15vw;
+     border-top: 1px solid white;
+}
+.content p{
+     font-size: 1.5rem;
+     font-weight: lighter;
+     opacity: 0.8;
+}
+.content p:first-child{
+     font-size: 2rem;
+}
+.pageFive img{
+     height: 350px;
+     width: 350px;
+     border-radius: 20px;
+     margin: 0 15vw 40px 0;
+}
+/******************************************
+/* Page Six
+/*******************************************/
+.pageSix{
+     height: 110vh;
+     display: flex;
+}
+/******************************************
+/* Page Seven
+/*******************************************/
+.pageSeven{
+     height: 50vh;
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     background-image: url("images/pexels-artem-podrez-7233131.jpg");
+     background-size: cover;
+     background-attachment: fixed;
+     color: white;
 }
