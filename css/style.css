@@ -194,16 +194,20 @@ body {
      font-size: 2rem;
 }
 .projectBox .description{
+     height: 10vh;
+     width: 20vw;
      font-size: 1.1rem;
+     text-align: center;
 }
 .projectBox button{
      margin: 2vh 0 0 0;
-     width: 5vw;
-     height: 3vh;
+     width: 10vw;
+     height: 8vh;
      color: white;
-     border: 1px solid white;
+     border: 2px solid white;
      border-radius: 10px;
      background-color: transparent;
+     font-family: 'Times New Roman', Times, serif;
 }
 /******************************************
 /* Page Four
@@ -334,10 +338,11 @@ body {
 .pageSeven p{
      font-size: 1rem;
      font-weight: lighter;
-     opacity: 0.7;
+     opacity: 0.8;
 }
 .pageSeven img{
-     height: 35px;
-     width: 35px;
+     height: 30px;
+     width: 30px;
      opacity: 0.7;
+     margin: 0 12px;
 }
