@@ -76,6 +76,9 @@ body {
      justify-content: center;
      align-items: center;
 }
+.learnMore:hover{
+     background-color: rgba(255, 255, 255, 0.3)
+}
 .pageOne .line{
      background-color: white;
      height: 20vh;
@@ -208,6 +211,9 @@ body {
      border-radius: 10px;
      background-color: transparent;
      font-family: 'Times New Roman', Times, serif;
+}
+.projectBox button:hover{
+     background-color: rgba(255, 255, 255, 0.3);
 }
 /******************************************
 /* Page Four
@@ -345,4 +351,7 @@ body {
      width: 30px;
      opacity: 0.7;
      margin: 0 12px;
+}
+.pageSeven img:hover{
+     transform: scale(1.1);
 }
