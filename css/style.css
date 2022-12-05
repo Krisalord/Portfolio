@@ -166,6 +166,12 @@ body {
      text-align: center;
      font-size: 1.2rem;
 }
+.projectline{
+     border-bottom: 1px solid white;
+     height: 1px;
+     width: 15vw;
+     margin: 2vh 0 2vh 0;
+}
 .projects{
      width: 75vw;
      height: 110vh;
@@ -173,47 +179,6 @@ body {
      justify-content: space-around;
      align-items: center;
      margin: 10vh 0 0 0;
-}
-.projectBox{
-     height: 110vh;
-     width: 25vw;
-     display: flex;
-     flex-flow: column;
-     align-items: center;
-     justify-content: flex-start;
-}
-.projectPic{
-     height: 70vh;
-     width: 80%;
-}
-.projectline{
-     border-bottom: 1px solid white;
-     height: 1px;
-     width: 15vw;
-     margin: 2vh 0 2vh 0;
-}
-.projectBox .name{
-     margin: 5vh 0 0 0;
-     font-size: 2rem;
-}
-.projectBox .description{
-     height: 10vh;
-     width: 20vw;
-     font-size: 1.1rem;
-     text-align: center;
-}
-.projectBox button{
-     margin: 2vh 0 0 0;
-     width: 10vw;
-     height: 8vh;
-     color: white;
-     border: 2px solid white;
-     border-radius: 10px;
-     background-color: transparent;
-     font-family: 'Times New Roman', Times, serif;
-}
-.projectBox button:hover{
-     background-color: rgba(255, 255, 255, 0.3);
 }
 /******************************************
 /* Page Four
