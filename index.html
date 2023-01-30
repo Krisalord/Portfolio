@@ -7,6 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Blank Template</title>
 
+
+		<!-- Font for brackets - font-family: 'Mr De Haviland', cursive; -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap" rel="stylesheet">
+		<!-- Font for headers - font-family: 'Carter One', cursive; -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -14,6 +23,7 @@
 	<body>
 		<header>
 			<div id="headerTitle">
+				<img src="css/images/logo.png">
 			</div>
 			<div id="menuList">
 				<span class="menuItem">About Me</span>
@@ -26,9 +36,20 @@
 		</header>
 		<!-- main content of the page -->
 		<div id="contentWrapper">
-			<div id="aboutMe">
-				<h1>Welcome to my website</h1>
-				<p>Content goes here</p>
+			<div id="aboutMeWrapper">
+				<!-- About me text block -->
+				<div id="aboutMeTextWrapper">
+					<span id="openingBrackets" class="tags">&lthtml&gt</span>
+					<div id="aboutMeText">
+						<h2 id="aboutMeHeader">Hi, I'm Artur,<br>your next software engineer.</h2>
+						<p>I'm a software engineer based in Finland.</p>
+						<p> problems and using my skills to bring peoples dreams to reality is my passion.</p>
+						<p> of my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
+					</div>
+					<span id="closingBrackets" class="tags">&lt/html&gt</span>
+				</div>
+				<!-- About me animation block -->
+				<div id="aboutMeAniWrapper"></div>
 			</div>
 		</div>
 		<script type="text/javascript" src="js/main.js"></script>
