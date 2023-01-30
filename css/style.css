@@ -1,10 +1,9 @@
 /* Box Model Hack */
-* {
+*{
      box-sizing: border-box;
 }
-
 /* Clear fix hack */
-.clearfix:after {
+.clearfix:after{
      content: ".";
      display: block;
      clear: both;
@@ -12,31 +11,80 @@
      line-height: 0;
      height: 0;
 }
-
-.clear {
+.clear{
 	clear: both;
 }
-
 /******************************************
-/* BASE STYLES
+/* Starting/base styles
 /*******************************************/
+body{
+     height: 100vh;
+     display: flex; 
+     flex-direction: row;
+     width: 100vw;
+     min-width: 350px;
 
-body {
-
+     overflow-y: scroll;
+     overflow-x: hidden;
 }
-
-
 /******************************************
-/* LAYOUT
+/* Main styles
 /*******************************************/
-header {
+/* CSS FOR HEADER */
+header{
+     background-color: #333;
+     color: #fff;
+     width: 140px;
+     height: 100vh;
+     min-height: 440px;
 
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
 }
+/* HEADER LOGO DIV */
+/* Box with logo + title */
+#headerTitle{
+     height: 180px;
+     min-height: 180px;
+     width: 100%;
 
-footer {
-
+     border: 1px solid red;
 }
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+/* Div with menu items */
+#menuList{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+}
+/* Single menu item */
+.menuItem{
+     height: 60px;
+     min-height: 60px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid blue;
+}
+/* Socials in header div */
+#socials{
+     height: 150px;
+     min-height: 150px;
+     width: 100%;
+     border: 1px solid green;
+}
+#content{
+     height: 100%;
+     width: calc(100% - 40px);
+}
+/* Media query */
+@media screen and (max-width: 1300px){
+     header{
+          visibility: hidden;
+     }
+     #content{
+          height: 100%;
+          width: 100%;
+     }
+}
