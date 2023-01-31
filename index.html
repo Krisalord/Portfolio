@@ -6,8 +6,6 @@
     	<meta name="keywords" content="one, two, three">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Blank Template</title>
-
-
 		<!-- Font for brackets - font-family: 'Mr De Haviland', cursive; -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,39 +19,47 @@
 		<link rel="stylesheet" href="css/stylePhone.css">
 	</head>
 	<body>
-		<!-- <header>
+		<header>
 			<div id="headerTitle">
 				<img src="css/images/logo.png">
 			</div>
 			<div id="menuList">
-				<span class="menuItem">About Me</span>
-				<span class="menuItem">Skills</span>
-				<span class="menuItem">My Work</span>
-				<span class="menuItem">Contact</span>
+				<span class="menuItem" id="aboutMeOpen">About Me</span>
+				<span class="menuItem" id="skillsOpen">Skills</span>
+				<span class="menuItem" id="myWorkOpen">My Work</span>
+				<span class="menuItem" id="contactMeOpen">Contact</span>
 			</div>
 			<div id="socials">
 			</div>
-		</header> -->
+		</header>
 		<div id="hamburgerMenu">
 			<input type="image" src="./css/images/menu.png" id="hamburgerToggle">
 		</div>
 		<!-- main content of the page -->
 		<div id="contentWrapper">
-			<div id="aboutMeWrapper">
-				<!-- About me text block -->
-				<div id="aboutMeTextWrapper">
-					<span id="openingBrackets" class="tags">&lthtml&gt</span>
-					<div id="aboutMeText">
-						<h2 id="aboutMeHeader">Hi, I'm Artur,<br>your next software engineer.</h2>
-						<p>I'm a software engineer based in Finland.</p>
-						<p> problems and using my skills to bring peoples dreams to reality is my passion.</p>
-						<p> of my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
-					</div>
-					<span id="closingBrackets" class="tags">&lt/html&gt</span>
-				</div>
-				<!-- About me animation block -->
-				<div id="aboutMeAniWrapper"></div>
-			</div>
+			<span id="openingBrackets" class="tags">&lthtml&gt</span>
+
+
+			<!-- Wrapper for aboutMe page -->
+<div id="aboutMeWrapper">
+	<!-- About me text block -->
+	<div id="aboutMeTextWrapper">
+		<!-- Main text of the page -->
+		<div id="aboutMeText">
+			<h2 id="aboutMeHeader">Hi, I'm Artur,<br>your next software engineer.</h2>
+			<p>I'm a software engineer based in Finland.</p>
+			<p> problems and using my skills to bring peoples dreams to reality is my passion.</p>
+			<p> of my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
+		</div>
+	</div>
+	<!-- About me animation block -->
+	<div id="aboutMeAniWrapper">
+
+	</div>
+</div>
+
+			<span id="closingBrackets" class="tags">&lt/html&gt</span>
+		<!-- End of contentWrapper -->
 		</div>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
