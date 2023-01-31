@@ -176,14 +176,14 @@ header{
     margin-bottom: 0.5rem;
 }
 /* Opening for P */
-#aboutMeText p:first-of-type::before, #contactMeText p:first-of-type::before{
+#aboutMeText p:first-of-type::before, #contactMeText p:first-of-type::before,#experienceText p:first-of-type::before{
     content: "<p>";
     margin-left: -0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 /* Closing for P */
-#aboutMeText p:last-child::after, #contactMeText p:last-child::after{
+#aboutMeText p:last-child::after, #contactMeText p:last-child::after, #experienceText p:last-child::after{
     content: "</p>";
     margin-left: -0.5rem;
     margin-top: 0.5rem;
@@ -204,14 +204,14 @@ header{
     flex-wrap: wrap;
     align-items: flex-start;
 }
-#aboutMeTextWrapper h2, #contactMeTextWrapper h2{
+#aboutMeTextWrapper h2, #contactMeTextWrapper h2, #experienceTextWrapper h2{
     font-family: 'Carter One', cursive;
     font-size: 2rem;
     color: #08fdd8;
     font-weight: 400;
     margin-left: 1rem;
 }
-#aboutMeTextWrapper p, #contactMeTextWrapper p{
+#aboutMeTextWrapper p, #contactMeTextWrapper p, #experienceTextWrapper p{
     font-family: 'Carter One', cursive;
     font-size: 1rem;
     font-weight: 400;
@@ -265,4 +265,32 @@ header{
 #contactMeFormWrapper::after{
     content: "</form>";
     margin-left: 0.5rem;
+}
+/* ------------------------- */
+/* EXPERIENCE BLOCK */
+/* ------------------------- */
+#experienceWrapper{
+    display: flex;
+    flex-direction: column;
+}
+/* Wrapper for spans + texts */
+#experienceTextWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+#experienceWrapper h2{
+    font-family: 'Carter One', cursive;
+    font-size: 2rem;
+    color: #08fdd8;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+#experienceWrapper p{
+    font-family: 'Carter One', cursive;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 1rem;
 }
