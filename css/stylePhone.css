@@ -59,8 +59,8 @@ body{
 #hamburgerToggle{
     margin-top: 0.5rem;
     margin-right: 0.5rem;
-    height: 100%;
-    aspect-ratio: 1 / 1;
+    height: 50px;
+    width: 50px;
     padding: 7px;
     background: #0f0f0f;
 }
