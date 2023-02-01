@@ -17,11 +17,12 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/stylePhone.css">
+		<link rel="stylesheet" href="css/stylePC.css">
 	</head>
 	<body>
 		<header>
 			<div id="headerTitle">
-				<img src="css/images/logo.png">
+				<!-- <img src="css/images/logo.png"> -->
 			</div>
 			<div id="menuList">
 				<span class="menuItem" id="aboutMeOpen">About Me</span>
@@ -30,6 +31,9 @@
 				<span class="menuItem" id="contactMeOpen">Contact</span>
 			</div>
 			<div id="socials">
+				<a href="https://github.com/Krisalord" target="_blank" rel="noopener noreferrer"><img src="css/images/GitHub.png"></a>
+				<a href="https://discord.com/users/304658341957730306" target="_blank" rel="noopener noreferrer"><img src="css/images/Discord.png"></a>
+				<a href="https://www.linkedin.com/in/artur-motin-772b22255/" target="_blank" rel="noopener noreferrer"><img src="css/images/LinkedIn.png"></a>
 			</div>
 		</header>
 		<div id="hamburgerMenu">
@@ -38,7 +42,27 @@
 		<!-- main content of the page -->
 		<div id="contentWrapper">
 		<span id="openingBrackets" class="tags">&lthtml&gt</span>
-			
+
+
+
+			<div id="contactMeWrapper">
+				<div id="contactMeTextWrapper">
+					<h2 id="contactMeHeader">Contact Me</h2>
+					<p>I am currently accepting new freelance clients, interesting project opportunities, or possible job offers!</p>
+				</div>
+				<div id="contactMeFormWrapper">
+					<form>
+						<input type="text" class="contactFormText" placeholder="Name">
+						<input type="text" class="contactFormText" placeholder="Email">
+						<input type="text" class="contactFormText" placeholder="Subject">
+						<input type="textarea" class="contactFormText" placeholder="Your message...">
+						<input type="button" id="contactFormBtn" value="Send Message">
+					</form>
+				</div>
+			</div>
+
+
+
 		<span id="closingBrackets" class="tags">&lt/html&gt</span>
 		</div>
 		<!-- End of contentWrapper -->
