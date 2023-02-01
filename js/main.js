@@ -77,3 +77,58 @@ document.querySelector('#aboutMeOpen').addEventListener('click', function(){
     document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
     closedToggle--
 })
+
+document.querySelector('#skillsOpen').addEventListener('click', function(){
+    document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
+    
+    const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
+    const contactMeWrapper = `
+    <div id="experienceWrapper">
+        <div id="experienceTextWrapper">
+            <div id="contactMeText">
+                <h2 id="contactMeHeader">Skills & Experience</h2>
+                <p>Since beginning of my journey as a freelance developer nearly 3 years ago, I’ve come along way in learning different technologies needed for web development to create products for both business and consumer use.</p>
+                <p>I can create responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom web pages, and coding interactive layouts.</p>
+                <p>I also have full stack developer experience working for a company developing android apps.</p>
+                <p>Visit my LinkedIn profile for mode details or just contact me.</p>
+            </div>
+        <div>
+        <div id="skillsVisual">
+            <div class="skillBar" id="skillBar1">
+                <span>HTML & CSS</span>
+                <footer><div></div></footer>
+            </div>
+            <div class="skillBar" id="skillBar2">
+                <span>JAVASCRIPT</span>
+                <footer><div></div></footer>
+            </div>
+            <div class="skillBar" id="skillBar3">
+                <span>BACKEND & API</span>
+                <footer><div></div></footer>
+            </div>
+            <div class="skillBar" id="skillBar4">
+                <span>C#</span>
+                <footer><div></div></footer>
+            </div>
+            <div id="box1" class="expBox">
+                <h4>Software developer</h4>
+                <span>AH-Talotekniikka</span>
+                <span class="date">06.2022 - 01.2023</span>
+                <p>Software developer for an android app.</p>
+            </div>
+            <div id="box2" class="expBox">
+                <h4>Software developer</h4>
+                <span>AH-Talotekniikka</span>
+                <span class="date">06.2022 - 01.2023</span>
+                <p>Software developer for an android app.</p>
+            </div>
+        </div>
+    </div>`;
+    firstSpan.insertAdjacentHTML('afterend', contactMeWrapper);
+
+    document.querySelector('header').style.display = 'none';
+    document.querySelector('#closingBrackets').style.display = 'block'
+    document.querySelector('#openingBrackets').style.display = 'block'
+    document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
+    closedToggle--
+})
