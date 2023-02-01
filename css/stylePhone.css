@@ -294,3 +294,14 @@ header{
     font-weight: 400;
     margin-left: 1rem;
 }
+
+
+
+/* ------------------------- */
+/* LOADING BAR */
+/* ------------------------- */
+.skillBar footer{
+    width: 100%;
+    border: 1px solid blue;
+    height: 2px;
+}
