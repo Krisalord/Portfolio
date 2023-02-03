@@ -1,16 +1,5 @@
 window.addEventListener('resize', function(){
-    let divForContactFormCreated = 2
     if(window.innerWidth >= 1000){
-        if(divForContactFormCreated == 2){
-            const form = document.querySelector('form')
-            const inputs = form.querySelectorAll('.contactFormText')
-            const newDiv = document.createElement("div")
-            for (let i = 0; i < 2; i++){
-            newDiv.appendChild(inputs[i])
-            }
-            form.insertBefore(newDiv, inputs[2])
-            divForContactFormCreated--
-        }
         document.querySelector('header').style.display = 'flex'
     }
     else if(window.innerWidth < 1000){
@@ -61,10 +50,10 @@ document.querySelector('#aboutMeOpen').addEventListener('click', function(){
     const contactMeWrapper = `
     <div id="aboutMeWrapper">
         <div id="aboutMeTextWrapper">
-            <h2 id="aboutMeHeader">Hi, I'm Artur,<br>your next software engineer.</h2>
+            <h2 id="aboutMeHeader">Hi, I'm Artur, your next software engineer</h2>
             <p>I'm a software engineer based in Finland.</p>
-            <p> problems and using my skills to bring peoples dreams to reality is my passion.</p>
-            <p> of my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
+            <p>Solving roblems and using my skills to bring peoples dreams to reality is my passion.</p>
+            <p>In my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
         </div>
         <div id="aboutMeAniWrapper">
 
@@ -247,3 +236,4 @@ document.querySelector('#contactMeOpen').addEventListener('click', function(){
         }
     })
 })
+//OPEN MY WORK PAGE

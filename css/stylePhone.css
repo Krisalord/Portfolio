@@ -39,6 +39,7 @@ body{
 /* **************************************************** */
 #contentWrapper{
     height: 100%;
+    width: 100%;
     margin: 5rem 2rem 0 2rem;
 }
 /* **************************************************** */
@@ -139,21 +140,21 @@ header{
 /* **************************************************** */
 .tags{
     color: #515152;
-    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Indie Flower', cursive;
     font-weight: 600;
     display: block;
     font-size: 1.4rem;
 }
 *::before{
     color: #515152;
-    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Indie Flower', cursive;
     font-weight: 600;
     display: block;
     font-size: 1.4rem;
 }
 *::after{
     color: #515152;
-    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Indie Flower', cursive;
     font-weight: 600;
     display: block;
     font-size: 1.4rem;
@@ -189,28 +190,28 @@ header{
 /* **************************************************** */
 /* **************************************************** */
 /* Opening for H2 */
-#aboutMeHeader::before, #contactMeHeader::before, #experienceHeader::before{
+#aboutMeHeader::before, #contactMeHeader::before, #experienceHeader::before, #myWorkHeader::before{
     content: "<h2>";
     margin-left: -0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 /* Closing for H2 */
-#aboutMeHeader::after, #contactMeHeader::after, #experienceHeader::after{
+#aboutMeHeader::after, #contactMeHeader::after, #experienceHeader::after, #myWorkHeader::after{
     content: "</h2>";
     margin-left: -0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 /* Opening for P */
-#aboutMeTextWrapper p:first-of-type::before, #contactMeTextWrapper p:first-of-type::before, #experienceTextWrapper p:first-of-type::before{
+#aboutMeTextWrapper p:first-of-type::before, #contactMeTextWrapper p:first-of-type::before, #experienceTextWrapper p:first-of-type::before, #myWorkTextWrapper p:first-of-type::before{
     content: "<p>";
     margin-left: -0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 /* Closing for P */
-#aboutMeTextWrapper p:last-of-type::after, #contactMeTextWrapper p:last-of-type::after, #experienceTextWrapper p:last-of-type::after{
+#aboutMeTextWrapper p:last-of-type::after, #contactMeTextWrapper p:last-of-type::after, #experienceTextWrapper p:last-of-type::after, #myWorkTextWrapper p:last-of-type::after{
     content: "</p>";
     margin-left: -0.5rem;
     margin-top: 0.5rem;
@@ -221,16 +222,16 @@ header{
 /* STYLING FOR ALL H2's and P's inside content wrappers */
 /* **************************************************** */
 /* **************************************************** */
-#aboutMeTextWrapper h2, #contactMeTextWrapper h2, #experienceTextWrapper h2{
+#aboutMeTextWrapper h2, #contactMeTextWrapper h2, #experienceTextWrapper h2, #myWorkTextWrapper h2{
     font-size: 3rem;
     color: #08fdd8;
     font-weight: 400;
     margin: 0;
 } 
-#aboutMeTextWrapper p, #contactMeTextWrapper p, #experienceTextWrapper p{
+#aboutMeTextWrapper p, #contactMeTextWrapper p, #experienceTextWrapper p, #myWorkTextWrapper p{
     font-size: 1.3rem;
     font-weight: 400;
-    margin: 0;
+    margin: 0.5rem 0;
 }
 /* **************************************************** */
 /* **************************************************** */
@@ -242,7 +243,7 @@ header{
     flex-direction: row;
 }
 /* Wrapper for spans + texts */
-#aboutMeTextWrapper{
+#aboutMeTextWrapper, #contactMeTextWrapper, #experienceTextWrapper, #myWorkTextWrapper{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -257,14 +258,6 @@ header{
 #contactMeWrapper{
     display: flex;
     flex-direction: column;
-}
-/* Wrapper for spans + texts */
-#contactMeTextWrapper{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
 }
 /* Email form */
 .contactFormText{
@@ -333,14 +326,6 @@ header{
 #experienceWrapper{
     display: flex;
     flex-direction: column;
-}
-/* Wrapper for spans + texts */
-#experienceTextWrapper{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
 }
 /* Wrapper for progress bars and epx boxes */
 #skillsVisualWrapper{

@@ -128,95 +128,16 @@
     /*                 BACKGROUND BRACKETS                  */
     /* **************************************************** */
     /* **************************************************** */
-    .tags{
-        color: #515152;
-        font-family: 'Mr De Haviland', cursive;
-        font-weight: 600;
-        display: block;
-        font-size: 1.4rem;
-    }
-    *::before{
-        color: #515152;
-        font-family: 'Mr De Haviland', cursive;
-        font-weight: 600;
-        display: block;
-        font-size: 1.4rem;
-    }
-    *::after{
-        color: #515152;
-        font-family: 'Mr De Haviland', cursive;
-        font-weight: 600;
-        display: block;
-        font-size: 1.4rem;
-    }
     /* Opening html + body */
     #openingBrackets{
         position: relative;
-        top: 0;
-        margin-top: 1rem;
-    }
-    #openingBrackets::after{
-        margin-left: 1rem;
-        content: "<body>";
-    }
-    /* Closing html + body */
-    #closingBrackets{
-        position: relative;
-        bottom: 0;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    #closingBrackets::before{
-        margin-left: 1rem;
-        content: "</body>";
     }
     /* **************************************************** */
     /* **************************************************** */
-    /*      CLOSING AND OPENING BRACKETS FOR ELEMENTS       */
+    /*              WRAPPER FOR TEXT SECTION                */
     /* **************************************************** */
     /* **************************************************** */
-    /* Opening for H2 */
-    #aboutMeHeader::before, #contactMeHeader::before{
-        content: "<h2>";
-        margin-left: -0.5rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    /* Closing for H2 */
-    #aboutMeHeader::after, #contactMeHeader::after{
-        content: "</h2>";
-        margin-left: -0.5rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    /* Opening for P */
-    #aboutMeTextWrapper p:first-of-type::before, #contactMeTextWrapper p:first-of-type::before,#experienceTextWrapper p:first-of-type::before{
-        content: "<p>";
-        margin-left: -0.5rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    /* Closing for P */
-    #aboutMeTextWrapper p:last-child::after, #contactMeTextWrapper p:last-child::after, #experienceTextWrapper p:last-child::after{
-        content: "</p>";
-        margin-left: -0.5rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    /* **************************************************** */
-    /* **************************************************** */
-    /* STYLING FOR ALL H2's and P's inside content wrappers */
-    /* **************************************************** */
-    /* **************************************************** */
-
-    /* **************************************************** */
-    /* **************************************************** */
-    /*                   ABOUT ME BLOCK                     */
-    /* **************************************************** */
-    /* **************************************************** */
-
-    /* Wrapper for spans + texts */
-    #aboutMeTextWrapper{
+    #aboutMeTextWrapper, #contactMeTextWrapper, #experienceTextWrapper, #myWorkTextWrapper{
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -227,6 +148,12 @@
     }
     /* **************************************************** */
     /* **************************************************** */
+    /*                   ABOUT ME BLOCK                     */
+    /* **************************************************** */
+    /* **************************************************** */
+    
+    /* **************************************************** */
+    /* **************************************************** */
     /*                  CONTACT ME BLOCK                    */
     /* **************************************************** */
     /* **************************************************** */
@@ -234,16 +161,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-    /* Wrapper for spans + texts */
-    #contactMeTextWrapper{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0 2rem;
     }
     /* Email form */
     #contactMeMapWrapper{
@@ -282,16 +199,6 @@
     #experienceWrapper{
         display: flex;
         flex-direction: row;
-    }
-    /* Wrapper for spans + texts */
-    #experienceTextWrapper{
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 2rem;
     }
     /* Wrapper for progress bars and epx boxes */
     #skillsVisualWrapper{
