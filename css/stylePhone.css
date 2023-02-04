@@ -23,6 +23,7 @@ body{
     display: flex;
     flex-direction: column;
     max-width: 100vw;
+    width: 100vw;
     background: #1d1d1d;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -235,14 +236,18 @@ header{
 }
 /* **************************************************** */
 /* **************************************************** */
-/*                   ABOUT ME BLOCK                     */
+/*              MAIN WRAPPER FOR CONTENT                */
 /* **************************************************** */
 /* **************************************************** */
-#aboutMeWrapper{
+#contactMeWrapper, #experienceWrapper, #aboutMeWrapper, #myWorkWrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
-/* Wrapper for spans + texts */
+/* **************************************************** */
+/* **************************************************** */
+/*              WRAPPER FOR TEXT SECTION                */
+/* **************************************************** */
+/* **************************************************** */
 #aboutMeTextWrapper, #contactMeTextWrapper, #experienceTextWrapper, #myWorkTextWrapper{
     width: 100%;
     display: flex;
@@ -252,13 +257,16 @@ header{
 }
 /* **************************************************** */
 /* **************************************************** */
+/*                   ABOUT ME BLOCK                     */
+/* **************************************************** */
+/* **************************************************** */
+
+
+/* **************************************************** */
+/* **************************************************** */
 /*                  CONTACT ME BLOCK                    */
 /* **************************************************** */
 /* **************************************************** */
-#contactMeWrapper{
-    display: flex;
-    flex-direction: column;
-}
 /* Email form */
 .contactFormText{
     width: calc(100% - 1rem);
@@ -323,10 +331,6 @@ header{
 /*                 EXPERIENCE BLOCK                     */
 /* **************************************************** */
 /* **************************************************** */
-#experienceWrapper{
-    display: flex;
-    flex-direction: column;
-}
 /* Wrapper for progress bars and epx boxes */
 #skillsVisualWrapper{
     width: 100%;

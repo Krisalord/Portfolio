@@ -134,6 +134,15 @@
     }
     /* **************************************************** */
     /* **************************************************** */
+    /*              MAIN WRAPPER FOR CONTENT                */
+    /* **************************************************** */
+    /* **************************************************** */
+    #contactMeWrapper, #experienceWrapper, #aboutMeWrapper, #myWorkWrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    /* **************************************************** */
+    /* **************************************************** */
     /*              WRAPPER FOR TEXT SECTION                */
     /* **************************************************** */
     /* **************************************************** */
@@ -157,11 +166,7 @@
     /*                  CONTACT ME BLOCK                    */
     /* **************************************************** */
     /* **************************************************** */
-    #contactMeWrapper{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+    
     /* Email form */
     #contactMeMapWrapper{
         width: 50%;
@@ -196,10 +201,6 @@
     /*            SKILLS/EXPERICENCE BLOCK                  */
     /* **************************************************** */
     /* **************************************************** */
-    #experienceWrapper{
-        display: flex;
-        flex-direction: row;
-    }
     /* Wrapper for progress bars and epx boxes */
     #skillsVisualWrapper{
         width: 45%;
