@@ -14,9 +14,11 @@
 .clear{
     clear: both;
 }
-/******************************************
-/* Starting/base styles
-/*******************************************/
+/* **************************************************** */
+/* **************************************************** */
+/*         MAIN CSS FOR BODY + HEADER POSITION          */
+/* **************************************************** */
+/* **************************************************** */
 body{
     min-height: 100vh;
     height: auto;
@@ -39,8 +41,8 @@ body{
 /* **************************************************** */
 /* **************************************************** */
 #contentWrapper{
+    min-height: 100vh;
     height: 100%;
-
     margin: 5rem 2rem 0 2rem;
 }
 /* **************************************************** */
@@ -52,7 +54,7 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    height: 50px;
+    height: calc(50px + 0.5rem);
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -76,7 +78,7 @@ header{
     background-color: rgba(25,25,25,1);
     color: #fff;
     min-width: 100vw;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     min-height: 440px;
     position: fixed;
@@ -411,3 +413,28 @@ header{
 /*                   MY WORK BLOCK                      */
 /* **************************************************** */
 /* **************************************************** */
+#myWorkListWrapper{
+    display: flex;
+    flex-direction: column;
+}
+/* Text block of the project box */
+.textAboutProject{
+    width: 70%;
+}
+.textAboutProject h5{
+
+}
+/* checkProjectBox with image of the project */
+#checkProject{
+    width: 30%;
+    height: 100%;
+}
+/* My Project Box */
+.projectBox{
+    background-color: #2a2a2a;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    margin: 1rem 0;
+    
+}

@@ -6,17 +6,9 @@
     /* **************************************************** */
     body{
         min-height: 550px;
-        max-height: 100vh;
-        height: auto;
-        display: flex;
         flex-direction: row;
-        max-width: 100vw;
-        background: #1d1d1d;
-        color: #fff;
-        font-family: 'Montserrat', sans-serif;
-        overflow-y: scroll;
-        overflow-x: hidden;
     }
+    
     /* **************************************************** */
     /* **************************************************** */
     /*                     Main styles                      */
@@ -26,7 +18,6 @@
     /* **************************************************** */
     /* **************************************************** */
     #contentWrapper{
-        height: 100vh;
         margin: 0 2rem 0 10rem;
         display: flex;
         flex-direction: column;
@@ -39,20 +30,6 @@
     /* **************************************************** */
     #hamburgerMenu{
         display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 50px;
-        width: 100%;
-        justify-content: flex-end;
-    }
-    #hamburgerToggle{
-        margin-top: 0.5rem;
-        margin-right: 0.5rem;
-        height: 50px;
-        width: 50px;
-        padding: 7px;
-        background: black;;
     }
     /* **************************************************** */
     /* **************************************************** */
@@ -62,66 +39,10 @@
     /* **************************************************** */
     /* CSS FOR HEADER */
     header{
-        background-color: rgba(25,25,25,1);
-        color: #fff;
         width: 8rem;
         min-width: 8rem;
         height: 100vh;
         min-height: 550px;
-        position: fixed;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    /* HEADER LOGO DIV */
-    /* Box with logo + title */
-    #headerTitle{
-        height: 180px;
-        min-height: 180px;
-        width: 100%;
-        background-color: black;
-        display: flex;
-        background-image: url("./images/logo.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
-    #headerTitle img{
-        object-fit: contain;
-    }
-    /* Div with menu items */
-    #menuList{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        color: #909096;
-    }
-    /* Single menu item */
-    .menuItem{
-        height: 60px;
-        min-height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-top: 1px solid #51515283;
-    }
-    .menuItem:last-of-type{
-        border-bottom: 1px solid #51515283;
-    }
-    /* Socials in header div */
-    #socials{
-        height: 150px;
-        min-height: 150px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #socials img{
-        height: 30px;
-        width: 30px;
-        opacity: 40%;
-        padding: 5px;
     }
     /* **************************************************** */
     /* **************************************************** */
@@ -138,8 +59,8 @@
     /* **************************************************** */
     /* **************************************************** */
     #contactMeWrapper, #experienceWrapper, #aboutMeWrapper, #myWorkWrapper{
-        display: flex;
         flex-direction: row;
+        align-items: center;
     }
     /* **************************************************** */
     /* **************************************************** */
@@ -148,11 +69,6 @@
     /* **************************************************** */
     #aboutMeTextWrapper, #contactMeTextWrapper, #experienceTextWrapper, #myWorkTextWrapper{
         width: 50%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: flex-start;
         padding: 2rem;
     }
     /* **************************************************** */
@@ -166,35 +82,10 @@
     /*                  CONTACT ME BLOCK                    */
     /* **************************************************** */
     /* **************************************************** */
-    
     /* Email form */
     #contactMeMapWrapper{
-        width: 50%;
-        padding: 0 2rem;
-    }
-    .contactFormText{
-        width: calc(100% - 1rem);
-        border: 0;
-        margin: 0.5rem 0;
-        background: #2b2b2b;
-        height: 50px;
-        font-size: 16px;
-        color: #8d8d8d;
-        padding: 0 10px;
-        box-sizing: border-box;
-        border-bottom: 1px solid #2b2b2b;
-    }
-    #contactFormBtn{
-        height: 45px;
-        width: 200px;
-        font-size: 14px;
-        letter-spacing: 4px;
-        color: #08fdd8;
-        border: 1px solid #08fdd8;
-        background: #1d1d1d;
-        float: right;
-        margin-right: 1rem;
-        margin-top: 1.5rem;
+        width: 45%;
+        padding: 2rem;
     }
     /* **************************************************** */
     /* **************************************************** */
@@ -209,75 +100,25 @@
         flex-direction: column;
         justify-content: center;
     }
-    /* PROGRESS BAR */
-    .skillBar footer{
-        width: 100%;
-        background-color: gray;
-        margin: 0.8rem 0;
-    }
-    #skillBar1{
-        margin-top: 2rem;
-    }
-    #skillBar1 footer div{
-        width: 75%;
-        height: 1px;
-        background-color: #FF00FF;
-    }
-    #skillBar2 footer div{
-        width: 55%;
-        height: 1px;
-        background-color: #00FF00;
-    }
-    #skillBar3 footer div{
-        width: 35%;
-        height: 1px;
-        background-color: #FFFF00;  
-    }
-    #skillBar4 footer div{
-        width: 65%;
-        height: 1px;
-        background-color: #00FFFF;
-    }
-    #skillBar4{
-        margin-bottom: 4rem;
-    }
     /* EXP BOX */
     #expBoxes{
         display: flex;
         flex-direction: row;
     }
-    #box1{
-        display: flex;
-        flex-direction: column;
-        background: #2a2a2a;
-        padding: 1.5rem;
-        margin: 0 0 1rem 0;
+    /* **************************************************** */
+    /* **************************************************** */
+    /*                   MY WORK BLOCK                      */
+    /* **************************************************** */
+    /* **************************************************** */
+    #myWorkListWrapper{
+        width: 45%;
+        padding: 2rem;
+        justify-content: center;
+    }
+    /* My Project Box */
+    .projectBox{
+        background-color: #2a2a2a;
         width: 100%;
-    }
-    #box2{
-        display: flex;
-        flex-direction: column;
-        background: #2a2a2a;
         padding: 1.5rem;
-        margin: 1rem 0 0 0;
-        width: 100%;
-    }
-    .expBox h4{
-        margin-top: 0;
-        margin-bottom: 0.8rem;
-        font-weight: 400;
-        font-size: 1.2rem;
-    }
-    .expBox p{
-        margin-bottom: 0;
-        margin-top: 0.8rem;
-        font-size: 1rem;
-        font-weight: 300;
-    }
-    .expBox span{
-        font-size: 0.9rem;
-        opacity: 80%;
-        font-weight: 300;
-        color: #ababab;
     }
 }
