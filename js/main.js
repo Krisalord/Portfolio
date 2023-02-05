@@ -1,17 +1,21 @@
 window.addEventListener('resize', function(){
     if(window.innerWidth >= 1000){
         document.querySelector('header').style.display = 'flex'
+        document.querySelector('#contentWrapper').style.display = 'flex'
     }
     else if(window.innerWidth < 1000){
         document.querySelector('header').style.display = 'none'
+        document.querySelector('#contentWrapper').style.display = 'block'
     }
 })
 window.addEventListener('load', function(){
     if(window.innerWidth >= 1000){
         document.querySelector('header').style.display = 'flex'
+        document.querySelector('#contentWrapper').style.display = 'flex'
     }
     else if(window.innerWidth < 1000){
         document.querySelector('header').style.display = 'none'
+        document.querySelector('#contentWrapper').style.display = 'flex'
     }
 })
 //add hamburgerToggleFunction
@@ -20,9 +24,10 @@ let closedToggle = 1
 document.querySelector('#hamburgerToggle').addEventListener('click', function(){
     console.log(mapActive)
     if(closedToggle == 1){
-        document.querySelector('header').style.display = 'flex';
+        document.querySelector('header').style.display = 'block';
         document.querySelector("#closingBrackets").style.display = 'none'
         document.querySelector("#openingBrackets").style.display = 'none'
+        document.querySelector('#contentWrapper').style.display = 'none'
         document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/close.png')
         closedToggle++
         if(mapActive == 1){
@@ -34,6 +39,7 @@ document.querySelector('#hamburgerToggle').addEventListener('click', function(){
         document.querySelector('header').style.display = 'none';
         document.querySelector('#closingBrackets').style.display = 'block'
         document.querySelector('#openingBrackets').style.display = 'block'
+        document.querySelector('#contentWrapper').style.display = 'block'
         document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
         closedToggle--
         if(mapActive == 2){
@@ -66,8 +72,12 @@ document.querySelector('#aboutMeOpen').addEventListener('click', function(){
         document.querySelector('header').style.display = 'none';
         document.querySelector('#closingBrackets').style.display = 'block'
         document.querySelector('#openingBrackets').style.display = 'block'
+        document.querySelector('#contentWrapper').style.display = 'block'
         document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
         closedToggle--
+    }
+    else if(window.innerWidth >= 1000){
+        document.querySelector('#contentWrapper').style.display = 'flex'
     }
     const header = document.querySelector('#aboutMeHeader')
     const headerText = header.textContent
@@ -135,8 +145,12 @@ document.querySelector('#skillsOpen').addEventListener('click', function(){
         document.querySelector('header').style.display = 'none';
         document.querySelector('#closingBrackets').style.display = 'block'
         document.querySelector('#openingBrackets').style.display = 'block'
+        document.querySelector('#contentWrapper').style.display = 'block'
         document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
         closedToggle--
+    }
+    else if(window.innerWidth >= 1000){
+        document.querySelector('#contentWrapper').style.display = 'flex'
     }
     const header = document.querySelector('#experienceHeader')
     const headerText = header.textContent
@@ -191,8 +205,12 @@ document.querySelector('#contactMeOpen').addEventListener('click', function(){
         document.querySelector('header').style.display = 'none';
         document.querySelector('#closingBrackets').style.display = 'block'
         document.querySelector('#openingBrackets').style.display = 'block'
+        document.querySelector('#contentWrapper').style.display = 'block'
         document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
         closedToggle--
+    }
+    else if(window.innerWidth >= 1000){
+        document.querySelector('#contentWrapper').style.display = 'flex'
     }
     const header = document.querySelector('#contactMeHeader')
     const headerText = header.textContent
@@ -271,46 +289,6 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
 					</div>
 				</div>
 
-				<div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
-				<div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
-				<div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
-				<div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
 			</div>
 		</div>
     `;
@@ -321,8 +299,12 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
         document.querySelector('header').style.display = 'none';
         document.querySelector('#closingBrackets').style.display = 'block'
         document.querySelector('#openingBrackets').style.display = 'block'
+        document.querySelector('#contentWrapper').style.display = 'block'
         document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
         closedToggle--
+    }
+    else if(window.innerWidth >= 1000){
+        document.querySelector('#contentWrapper').style.display = 'flex'
     }
     const header = document.querySelector('#myWorkHeader')
     const headerText = header.textContent
