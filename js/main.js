@@ -237,3 +237,106 @@ document.querySelector('#contactMeOpen').addEventListener('click', function(){
     })
 })
 //OPEN MY WORK PAGE
+document.querySelector('#myWorkOpen').addEventListener('click', function(){
+
+    document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
+    //OPEN MY WORK
+    const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
+    const myWorkWrapper = `
+    <div id="myWorkWrapper">
+			<div id="myWorkTextWrapper">
+				<h2 id="myWorkHeader">My Work</h2>
+				<p>Here are some examples or my past work!</p>
+				<p>If you are considering me for a project, I strongly suggest you to view them.</p>
+			</div>
+			<div id="myWorkListWrapper">
+
+				<div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+				<div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+				<div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+				<div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+				<div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+				<div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+			</div>
+		</div>
+    `;
+    firstSpan.insertAdjacentHTML('afterend', myWorkWrapper);
+
+    //OPEN MY WORK FROM PHONE SCREEN
+    if(window.innerWidth < 1000){
+        document.querySelector('header').style.display = 'none';
+        document.querySelector('#closingBrackets').style.display = 'block'
+        document.querySelector('#openingBrackets').style.display = 'block'
+        document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
+        closedToggle--
+    }
+    const header = document.querySelector('#myWorkHeader')
+    const headerText = header.textContent
+    header.innerHTML = ""
+    
+    for (let i = 0; i < headerText.length; i++){
+        const span = document.createElement('span')
+        span.textContent = headerText[i]
+        span.addEventListener('mouseover', function(){
+            span.style.color = "red"
+        });
+        span.addEventListener('mouseout', function() {
+            span.style.color = "#08fdd8"
+        });
+        header.appendChild(span)
+    }
+})

@@ -61,6 +61,7 @@
     #contactMeWrapper, #experienceWrapper, #aboutMeWrapper, #myWorkWrapper{
         flex-direction: row;
         align-items: center;
+        width: 100%;
     }
     /* **************************************************** */
     /* **************************************************** */
@@ -110,15 +111,12 @@
     /*                   MY WORK BLOCK                      */
     /* **************************************************** */
     /* **************************************************** */
+    #myWorkTextWrapper{
+        max-width: 500px !important;
+    }
     #myWorkListWrapper{
-        width: 45%;
+        width: 50%;
         padding: 2rem;
         justify-content: center;
-    }
-    /* My Project Box */
-    .projectBox{
-        background-color: #2a2a2a;
-        width: 100%;
-        padding: 1.5rem;
     }
 }
