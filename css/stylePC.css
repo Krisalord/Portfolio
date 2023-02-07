@@ -57,7 +57,7 @@
     /*              MAIN WRAPPER FOR CONTENT                */
     /* **************************************************** */
     /* **************************************************** */
-    #contactMeWrapper, #experienceWrapper, #aboutMeWrapper, #myWorkWrapper{
+    .mainWrapper{
         flex-direction: row;
         align-items: center;
         width: 100%;
@@ -67,7 +67,7 @@
     /*              WRAPPER FOR TEXT SECTION                */
     /* **************************************************** */
     /* **************************************************** */
-    #aboutMeTextWrapper, #contactMeTextWrapper, #experienceTextWrapper, #myWorkTextWrapper{
+    .textWrapper{
         width: 50%;
         padding: 2rem;
     }
