@@ -1,16 +1,30 @@
 //add hamburgerToggleFunction
 //is hamburger closed or opened (1 = closed)
 let closedToggle = 1
-window.addEventListener('resize', function(){
-    if(window.innerWidth >= 1000){
-        document.querySelector('header').style.display = 'flex'
-        document.querySelector('#contentWrapper').style.display = 'flex'
-    }
-    else if(window.innerWidth < 1000){
-        document.querySelector('header').style.display = 'none'
-        document.querySelector('#contentWrapper').style.display = 'block'
-    }
-})
+if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    // do nothing, or add your own custom code for mobile devices
+  } else {
+    window.addEventListener('resize', function(){
+      if(window.innerWidth >= 1000){
+          document.querySelector('header').style.display = 'flex'
+          document.querySelector('#contentWrapper').style.display = 'flex'
+      }
+      else if(window.innerWidth < 1000){
+          document.querySelector('header').style.display = 'none'
+          document.querySelector('#contentWrapper').style.display = 'block'
+      }
+    });
+  }
+// window.addEventListener('resize', function(){
+//     if(window.innerWidth >= 1000){
+//         document.querySelector('header').style.display = 'flex'
+//         document.querySelector('#contentWrapper').style.display = 'flex'
+//     }
+//     else if(window.innerWidth < 1000){
+//         document.querySelector('header').style.display = 'none'
+//         document.querySelector('#contentWrapper').style.display = 'block'
+//     }
+// })
 window.addEventListener('load', function(){
     showLoading()
 
