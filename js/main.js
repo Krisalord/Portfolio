@@ -404,3 +404,7 @@ function showLoading(){
         preRoll.parentNode.removeChild(preRoll);
     }, 1000)
 }
+//Prevent horizontal "movement" on the phone screen
+document.addEventListener('touchmove', function (event) {
+    event.preventDefault();
+  }, { passive: false });
