@@ -334,11 +334,9 @@ function headerToSpan(){
         span.textContent = headerText[i]
         span.addEventListener('mouseover', function(){
             span.style.color = "red"
-            span.style.fontSize = "3.5rem"
         });
         span.addEventListener('mouseout', function() {
             span.style.color = "#08fdd8"
-            span.style.fontSize = ""
         });
         header.appendChild(span)
     }
