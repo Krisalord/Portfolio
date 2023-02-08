@@ -12,6 +12,8 @@ window.addEventListener('resize', function(){
     }
 })
 window.addEventListener('load', function(){
+    showLoading()
+
     if(window.innerWidth >= 1000){
         document.querySelector('header').style.display = 'flex'
         document.querySelector('#contentWrapper').style.display = 'flex'
@@ -20,8 +22,6 @@ window.addEventListener('load', function(){
         document.querySelector('header').style.display = 'none'
         document.querySelector('#contentWrapper').style.display = 'flex'
     }
-
-    showLoading()
 
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN MY WORK
@@ -45,8 +45,6 @@ window.addEventListener('load', function(){
     document.querySelector('#landingBtn').addEventListener('click', function(){
         closedToggle = 1
     })
-
-
 })
 document.querySelector('#hamburgerToggle').addEventListener('click', function(){
     console.log(closedToggle)
@@ -69,6 +67,8 @@ document.querySelector('#hamburgerToggle').addEventListener('click', function(){
 })
 //Loading page (When logo is clicked)
 document.querySelector('#headerTitle').addEventListener('click', function(){
+    showLoading()
+
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
     const landingWrapper = `
@@ -91,6 +91,8 @@ document.querySelector('#headerTitle').addEventListener('click', function(){
 })
 //OPEN ABOUT ME PAGE
 document.querySelector('#aboutMeOpen').addEventListener('click', function(){
+    showLoading()
+
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN ABOUT ME
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -131,6 +133,8 @@ document.querySelector('#aboutMeOpen').addEventListener('click', function(){
 })
 //OPEN SKILLS PAGE
 document.querySelector('#skillsOpen').addEventListener('click', function(){
+    showLoading()
+
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN ABOUT ME
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -181,6 +185,8 @@ document.querySelector('#skillsOpen').addEventListener('click', function(){
 //OPEN CONTACT ME PAGE
 document.querySelector('#contactMeOpen').addEventListener('click', contactMe)
 function contactMe(){
+    showLoading()
+
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN CONTACT ME
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -239,6 +245,8 @@ function contactMe(){
 }
 //OPEN MY WORK PAGE
 document.querySelector('#myWorkOpen').addEventListener('click', function(){
+    showLoading()
+
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN MY WORK
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -308,7 +316,6 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
     checkPageSize()
     headerToSpan()
 })
-
 //Check page size when opening something from header
 function checkPageSize(){
     if(window.innerWidth < 1000){
@@ -341,7 +348,6 @@ function headerToSpan(){
         header.appendChild(span)
     }
 }
-
 //SPARKS!!!
 const pointer = document.querySelector("#pointer");
 document.addEventListener("mousemove", (e) => {
@@ -371,29 +377,31 @@ document.addEventListener("mousemove", (e) => {
         }, 400);
     }, 100);
 });
-
 function showLoading(){
     // Create a new element for the pre-roll
     const preRoll = document.createElement("div")
     preRoll.id = "pre-roll"
-    preRoll.style.transition = "transform 0.5s ease-out"
-    
+    preRoll.style.transition = "transform 0.5s ease-out"    
     // Add a loading indicator
-    const spinner = document.createElement("div")
-    spinner.className = "spinner"
-    preRoll.appendChild(spinner)
-    
+    const loadingBar = document.createElement("div")
+    loadingBar.className = "loading-bar"
+    preRoll.appendChild(loadingBar)
+    //Add a loading text
+    const loadingSpan = document.createElement("span")
+    loadingSpan.className = "loading-span"
+    loadingSpan.innerText = "Loading..."
+    loadingSpan.style.marginTop = "1rem"
+    loadingSpan.style.fontSize = "2rem"
+    loadingSpan.style.color = "#08fdd8"
+    preRoll.appendChild(loadingSpan)
     // Add the pre-roll to the document
-    document.body.appendChild(preRoll)
-    
+    document.body.appendChild(preRoll)    
     // Remove the pre-roll after 0.5 seconds
     setTimeout(function() {
       preRoll.style.transform = "translateX(100%)"
-    }, 500)
-}
-  
-function hideLoading(){
-    // Remove the pre-roll from the document
-    const preRoll = document.getElementById("pre-roll")
-    preRoll.parentNode.removeChild(preRoll)
+    }, 500)    
+    // Remove the pre-roll after 2 seconds
+    setTimeout(function () {
+        preRoll.parentNode.removeChild(preRoll);
+    }, 1000)
 }

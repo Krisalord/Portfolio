@@ -45,20 +45,38 @@
 /*                        LOADING                       */
 /* **************************************************** */
 /* **************************************************** */
-#loading-screen{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.loading-bar{
+    width: 30%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.loading-bar::before{
+    content: "";
+    width: 0;
     height: 100%;
-    background-color: #1d1d1d;
+    background: linear-gradient(to right, #08fdd8, red);
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: loading 0.5s linear infinite;
+}
+@keyframes loading{
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+#pre-roll{
+    background-color: #191919;
+    position: fixed;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-#loading-text{
-    font-size: 36px;
-    color: #08fdd8;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
 }
 /* **************************************************** */
 /* **************************************************** */
@@ -587,27 +605,4 @@ header{
 #landingBtn:hover{
     background: #08fdd8;
     color: black;
-}
-/* Spinner style for loading screen */
-.spinner{
-    width: 50px;
-    height: 50px;
-    border: 8px solid rgba(255, 255, 255, 0.2);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-@keyframes spin{
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-#pre-roll{
-    background-color: rgba(0, 0, 0, 1);
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    z-index: 999;
 }
