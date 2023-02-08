@@ -1,3 +1,6 @@
+//add hamburgerToggleFunction
+//is hamburger closed or opened (1 = closed)
+let closedToggle = 1
 window.addEventListener('resize', function(){
     if(window.innerWidth >= 1000){
         document.querySelector('header').style.display = 'flex'
@@ -18,6 +21,8 @@ window.addEventListener('load', function(){
         document.querySelector('#contentWrapper').style.display = 'flex'
     }
 
+    showLoading()
+
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN MY WORK
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -29,11 +34,82 @@ window.addEventListener('load', function(){
 			<input type="button" id="landingBtn" value="Contact Me">
 		</div>
         <div id="landingSphereWrapper">
-		    <span class="content"></span>
+		    
         </div>
     `;
     firstSpan.insertAdjacentHTML('afterend', landingWrapper);
 
+    headerToSpan()
+
+    document.querySelector('#landingBtn').addEventListener('click', contactMe)
+    document.querySelector('#landingBtn').addEventListener('click', function(){
+        closedToggle = 1
+    })
+
+
+})
+document.querySelector('#hamburgerToggle').addEventListener('click', function(){
+    console.log(closedToggle)
+    if(closedToggle == 1){
+        document.querySelector('header').style.display = 'block';
+        document.querySelector("#closingBrackets").style.display = 'none'
+        document.querySelector("#openingBrackets").style.display = 'none'
+        document.querySelector('#contentWrapper').style.display = 'none'
+        document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/close.png')
+        closedToggle = 2
+    }
+    else if(closedToggle == 2){
+        document.querySelector('header').style.display = 'none';
+        document.querySelector('#closingBrackets').style.display = 'block'
+        document.querySelector('#openingBrackets').style.display = 'block'
+        document.querySelector('#contentWrapper').style.display = 'flex'
+        document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
+        closedToggle = 1
+    }
+})
+//Loading page (When logo is clicked)
+document.querySelector('#headerTitle').addEventListener('click', function(){
+    document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
+    const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
+    const landingWrapper = `
+    <div id="landingWrapper" class="mainWrapper">
+        <div id="landingTextWrapper" class="textWrapper">
+                <h2 id="landingHeader" class="mainHeader">Hi, I'm Artur Motin</h2>
+            <p>Your next software engineer!</p>
+            <input type="button" id="landingBtn" value="Contact Me">
+        </div>
+        <div>
+        </div>
+    </div>
+    `;
+    firstSpan.insertAdjacentHTML('afterend', landingWrapper);
+
+    checkPageSize()
+    headerToSpan()
+
+    document.querySelector('#landingBtn').addEventListener('click', contactMe)
+})
+//OPEN ABOUT ME PAGE
+document.querySelector('#aboutMeOpen').addEventListener('click', function(){
+    document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
+    //OPEN ABOUT ME
+    const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
+    const contactMeWrapper = `
+    <div id="aboutMeWrapper" class="mainWrapper">
+        <div id="aboutMeTextWrapper" class="textWrapper">
+            <h2 id="aboutMeHeader" class="mainHeader">About Me</h2>
+            <p>I'm a software engineer based in Finland.</p>
+            <p>Solving roblems and using my skills to bring peoples dreams to reality is my passion.</p>
+            <p>In my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
+        </div>
+        <div id="aboutMeAniWrapper">
+            <span class="content"></span>
+        </div>
+    </div>
+    `;
+    firstSpan.insertAdjacentHTML('afterend', contactMeWrapper);
+
+    checkPageSize()
     headerToSpan()
 
     const myTags = [
@@ -52,71 +128,6 @@ window.addEventListener('load', function(){
       
     }); 
     document.querySelector('.content').style.color = "#08fdd8";
-})
-//add hamburgerToggleFunction
-let mapActive = 2
-let closedToggle = 1
-document.querySelector('#hamburgerToggle').addEventListener('click', function(){
-    console.log("works")
-    if(closedToggle == 1){
-        document.querySelector('header').style.display = 'block';
-        document.querySelector("#closingBrackets").style.display = 'none'
-        document.querySelector("#openingBrackets").style.display = 'none'
-        document.querySelector('#contentWrapper').style.display = 'none'
-        document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/close.png')
-        closedToggle++
-    }
-    else if(closedToggle == 2){
-        document.querySelector('header').style.display = 'none';
-        document.querySelector('#closingBrackets').style.display = 'block'
-        document.querySelector('#openingBrackets').style.display = 'block'
-        document.querySelector('#contentWrapper').style.display = 'flex'
-        document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
-        closedToggle--
-    }
-})
-//Loading page (When logo is clicked)
-document.querySelector('#headerTitle').addEventListener('click', function(){
-    document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
-    const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
-    const landingWrapper = `
-    <div id="landingWrapper" class="mainWrapper">
-        <div id="landingTextWrapper" class="textWrapper">
-                <h2 id="landingHeader" class="mainHeader">Hi, I'm Artur Motin!</h2>
-            <p>Software developer from Finland</p>
-            <input type="button" id="landingBtn" value="Contact Me">
-        </div>
-        <div>
-        </div>
-    </div>
-    `;
-    firstSpan.insertAdjacentHTML('afterend', landingWrapper);
-
-    checkPageSize()
-    headerToSpan()
-})
-//OPEN ABOUT ME PAGE
-document.querySelector('#aboutMeOpen').addEventListener('click', function(){
-    document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
-    //OPEN ABOUT ME
-    const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
-    const contactMeWrapper = `
-    <div id="aboutMeWrapper" class="mainWrapper">
-        <div id="aboutMeTextWrapper" class="textWrapper">
-            <h2 id="aboutMeHeader" class="mainHeader">Hi, I'm Artur, your next software engineer</h2>
-            <p>I'm a software engineer based in Finland.</p>
-            <p>Solving roblems and using my skills to bring peoples dreams to reality is my passion.</p>
-            <p>In my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
-        </div>
-        <div id="aboutMeAniWrapper">
-
-        </div>
-    </div>
-    `;
-    firstSpan.insertAdjacentHTML('afterend', contactMeWrapper);
-
-    checkPageSize()
-    headerToSpan()
 })
 //OPEN SKILLS PAGE
 document.querySelector('#skillsOpen').addEventListener('click', function(){
@@ -168,8 +179,8 @@ document.querySelector('#skillsOpen').addEventListener('click', function(){
     headerToSpan()
 })
 //OPEN CONTACT ME PAGE
-document.querySelector('#contactMeOpen').addEventListener('click', function contactMe(){
-
+document.querySelector('#contactMeOpen').addEventListener('click', contactMe)
+function contactMe(){
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN CONTACT ME
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -197,12 +208,10 @@ document.querySelector('#contactMeOpen').addEventListener('click', function cont
     </div>
     `;
     firstSpan.insertAdjacentHTML('afterend', contactMeWrapper);
-    //map active = 1 (true)
-    mapActive--
     //SEND EMAIL
     document.querySelector('#contactFormBtn').addEventListener('click', function(){
         if(document.querySelector('#email').value && document.querySelector('#yourMessage').value){
-            
+            //CODE TO SEND EMAIL IF FIELDS ARE NOT EMPTY
         }
         else{
             let field1 = document.querySelector('#email')
@@ -227,11 +236,9 @@ document.querySelector('#contactMeOpen').addEventListener('click', function cont
 
     checkPageSize()
     headerToSpan()
-})
+}
 //OPEN MY WORK PAGE
 document.querySelector('#myWorkOpen').addEventListener('click', function(){
-    
-
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN MY WORK
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -264,6 +271,36 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
 					</div>
 				</div>
 
+                <div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+                <div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+
+                <div class="projectBox">
+					<h5>Portfolio website</h5>
+					<p>This is my personal portfolio website</p>
+					<span>HTML CSS JavaScript</span>
+					<div>
+						<img src="./css/images/folder.png">
+						<img src="./css/images/link.png">
+					</div>
+				</div>
+                
 			</div>
 		</div>
     `;
@@ -280,7 +317,7 @@ function checkPageSize(){
         document.querySelector('#openingBrackets').style.display = 'block'
         document.querySelector('#contentWrapper').style.display = 'flex'
         document.querySelector('#hamburgerToggle').setAttribute('src', './css/images/menu.png')
-        closedToggle--
+        closedToggle = 1
     }
     else if(window.innerWidth >= 1000){
         document.querySelector('#contentWrapper').style.display = 'flex'
@@ -297,9 +334,11 @@ function headerToSpan(){
         span.textContent = headerText[i]
         span.addEventListener('mouseover', function(){
             span.style.color = "red"
+            span.style.fontSize = "3.5rem"
         });
         span.addEventListener('mouseout', function() {
             span.style.color = "#08fdd8"
+            span.style.fontSize = ""
         });
         header.appendChild(span)
     }
@@ -335,7 +374,28 @@ document.addEventListener("mousemove", (e) => {
     }, 100);
 });
 
-const loadingScreen = document.getElementById("loading-screen");
-setTimeout(function(){
-    loadingScreen.style.display = "none";
-},1000);
+function showLoading(){
+    // Create a new element for the pre-roll
+    const preRoll = document.createElement("div")
+    preRoll.id = "pre-roll"
+    preRoll.style.transition = "transform 0.5s ease-out"
+    
+    // Add a loading indicator
+    const spinner = document.createElement("div")
+    spinner.className = "spinner"
+    preRoll.appendChild(spinner)
+    
+    // Add the pre-roll to the document
+    document.body.appendChild(preRoll)
+    
+    // Remove the pre-roll after 0.5 seconds
+    setTimeout(function() {
+      preRoll.style.transform = "translateX(100%)"
+    }, 500)
+}
+  
+function hideLoading(){
+    // Remove the pre-roll from the document
+    const preRoll = document.getElementById("pre-roll")
+    preRoll.parentNode.removeChild(preRoll)
+}
