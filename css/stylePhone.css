@@ -159,6 +159,7 @@ body{
 /* **************************************************** */
 /* CSS FOR HEADER */
 header{
+    display: none;
     background-color: rgba(25,25,25,1);
     color: #fff;
     min-width: 100vw;

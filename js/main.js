@@ -47,7 +47,6 @@ window.addEventListener('load', function(){
     })
 })
 document.querySelector('#hamburgerToggle').addEventListener('click', function(){
-    console.log(closedToggle)
     if(closedToggle == 1){
         document.querySelector('header').style.display = 'block';
         document.querySelector("#closingBrackets").style.display = 'none'
