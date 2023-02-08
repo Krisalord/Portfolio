@@ -405,6 +405,9 @@ function showLoading(){
     }, 1000)
 }
 //Prevent horizontal "movement" on the phone screen
-document.addEventListener('touchmove', function (event) {
-    event.preventDefault();
-  }, { passive: false });
+document.addEventListener('touchmove', function (event){
+    let touch = event.touches[0];
+    if (touch.pageX > touch.pageY) {
+      event.preventDefault();
+    }
+}, { passive: false });
