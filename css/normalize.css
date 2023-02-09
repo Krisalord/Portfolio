@@ -320,10 +320,7 @@ textarea {
 details {
   display: block;
 }
-
-/*
- * Add the correct display in all browsers.
- */
+/* Add the correct display in all browsers. */
 
 summary {
   display: list-item;
@@ -332,17 +329,12 @@ summary {
 /* Misc
    ========================================================================== */
 
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
+/* Add the correct display in IE 10+. */
+template{
   display: none;
 }
 
-/**
- * Add the correct display in IE 10.
- */
+/* Add the correct display in IE 10.*/
 
 [hidden] {
   display: none;
