@@ -30,6 +30,23 @@
 				<span class="menuItem" id="contactMeOpen">Contact</span>
 			</div>
 			<div id="socials">
+				<div id="getData" style="height: 50px; width: 50px; background-color: blue;">
+				<script>
+					document.querySelector('#getData').addEventListener('click', function(){
+						fetch("https://naughty-fox-garment.cyclic.app/api/portfolio")
+						.then(response => response.json())
+						.then(data => {
+  						// process the data here
+  						console.log(data)
+						})
+						.catch(error => {
+  						console.error('An error occurred:', error)
+						});
+					})
+					
+
+				</script>
+				</div>
 				<a href="https://github.com/Krisalord" target="_blank" rel="noopener noreferrer"><img src="css/images/GitHub.png"></a>
 				<a href="https://discord.com/users/304658341957730306" target="_blank" rel="noopener noreferrer"><img src="css/images/Discord.png"></a>
 				<a href="https://www.linkedin.com/in/artur-motin-772b22255/" target="_blank" rel="noopener noreferrer"><img src="css/images/LinkedIn.png"></a>
