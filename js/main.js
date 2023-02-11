@@ -1,3 +1,13 @@
+fetch("https://naughty-fox-garment.cyclic.app/api/portfolio")
+.then(response => response.json())
+.then(data => {
+  // process the data here
+  console.log(data)
+})
+.catch(error => {
+  console.error('An error occurred:', error)
+});
+
 //add hamburgerToggleFunction
 //is hamburger closed or opened (1 = closed)
 let closedToggle = 1
@@ -14,15 +24,7 @@ window.addEventListener('resize', function(){
 window.addEventListener('load', function(){
     showLoading()
 
-    fetch("https://naughty-fox-garment.cyclic.app/api/portfolio")
-    .then(response => response.json())
-    .then(data => {
-        // process the data here
-        console.log(data)
-    })
-    .catch(error => {
-        console.error('An error occurred:', error)
-    })
+
 
     if(window.innerWidth >= 1000){
         document.querySelector('header').style.display = 'flex'
