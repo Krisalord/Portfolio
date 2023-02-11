@@ -14,7 +14,7 @@ window.addEventListener('resize', function(){
 window.addEventListener('load', function(){
     showLoading()
 
-    fetch("https://naughty-fox-garment.cyclic.app/api/Portfolio")
+    fetch("https://naughty-fox-garment.cyclic.app/api/portfolio")
     .then(response => response.json())
     .then(data => {
         // process the data here
