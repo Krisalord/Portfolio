@@ -259,63 +259,14 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
 				<p>If you are considering me for a project, I strongly suggest you to view them.</p>
 			</div>
 			<div id="myWorkListWrapper">
-
-				<div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
-				<div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
-                <div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
-                <div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-
-                <div class="projectBox">
-					<h5>Portfolio website</h5>
-					<p>This is my personal portfolio website</p>
-					<span>HTML CSS JavaScript</span>
-					<div>
-						<img src="./css/images/folder.png">
-						<img src="./css/images/link.png">
-					</div>
-				</div>
-                
 			</div>
 		</div>
     `;
     firstSpan.insertAdjacentHTML('afterend', myWorkWrapper);
     checkPageSize()
     headerToSpan()
+
+    getData()
 })
 //Check page size when opening something from header
 function checkPageSize(){
@@ -414,3 +365,27 @@ document.addEventListener('touchmove', function (event){
     }
 }, { passive: false });
 
+async function getData(){
+		try{
+			const response = await fetch(`https://naughty-fox-garment.cyclic.app/api`)
+			const data = await response.json()
+			console.log(data)
+            for(let project in data){
+                const singleProject = `
+                <div class="projectBox">
+					<h5>${data[project].name}</h5>
+					<p>${data[project].description}</p>
+					<span>${data[project].languages}</span>
+					<div>
+						<a href="${data[project].link}"><img src="./css/images/link.png"></a>
+						<a href="${data[project].github}"><img src="./css/images/folder.png"></a>
+					</div>
+				</div>`;
+                const mainBox = document.querySelector('#myWorkListWrapper')
+                mainBox.innerHTML += singleProject
+            }
+		}
+		catch(error){
+			console.log(error)
+		}
+}
