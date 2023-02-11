@@ -14,8 +14,6 @@ window.addEventListener('resize', function(){
 window.addEventListener('load', function(){
     showLoading()
 
-
-
     if(window.innerWidth >= 1000){
         document.querySelector('header').style.display = 'flex'
         document.querySelector('#contentWrapper').style.display = 'flex'
@@ -24,7 +22,6 @@ window.addEventListener('load', function(){
         document.querySelector('header').style.display = 'none'
         document.querySelector('#contentWrapper').style.display = 'flex'
     }
-
     document.querySelector('#contentWrapper').innerHTML = '<span id="openingBrackets" class="tags">&lthtml&gt</span><span id="closingBrackets" class="tags">&lt/html&gt</span>'
     //OPEN MY WORK
     const firstSpan = document.querySelector('#contentWrapper span:first-of-type');
@@ -35,8 +32,8 @@ window.addEventListener('load', function(){
 			<p>Software developer from Finland</p>
 			<input type="button" id="landingBtn" value="Contact Me">
 		</div>
-        <div id="landingSphereWrapper">
-		    
+        <div id="cubeWrapper">
+
         </div>
     `;
     firstSpan.insertAdjacentHTML('afterend', landingWrapper);
@@ -79,7 +76,8 @@ document.querySelector('#headerTitle').addEventListener('click', function(){
             <p>Your next software engineer!</p>
             <input type="button" id="landingBtn" value="Contact Me">
         </div>
-        <div>
+        <div id="cubeWrapper">
+            
         </div>
     </div>
     `;
@@ -364,7 +362,7 @@ document.addEventListener('touchmove', function (event){
       event.preventDefault();
     }
 }, { passive: false });
-
+//GET DATA ABOUT PROJECTS FROM THE API
 async function getData(){
 		try{
 			const response = await fetch(`https://naughty-fox-garment.cyclic.app/api`)
