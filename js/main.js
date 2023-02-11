@@ -14,6 +14,16 @@ window.addEventListener('resize', function(){
 window.addEventListener('load', function(){
     showLoading()
 
+    fetch("https://naughty-fox-garment.cyclic.app/api/Portfolio")
+    .then(response => response.json())
+    .then(data => {
+        // process the data here
+        console.log(data)
+    })
+    .catch(error => {
+        console.error('An error occurred:', error)
+    })
+
     if(window.innerWidth >= 1000){
         document.querySelector('header').style.display = 'flex'
         document.querySelector('#contentWrapper').style.display = 'flex'
@@ -411,3 +421,4 @@ document.addEventListener('touchmove', function (event){
       event.preventDefault();
     }
 }, { passive: false });
+
