@@ -33,7 +33,6 @@ window.addEventListener('load', function(){
 			<input type="button" id="landingBtn" value="Contact Me">
 		</div>
         <div id="cubeWrapper">
-
         </div>
     `;
     firstSpan.insertAdjacentHTML('afterend', landingWrapper);
