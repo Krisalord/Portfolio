@@ -113,7 +113,7 @@ document.querySelector('#aboutMeOpen').addEventListener('click', function(){
     headerToSpan()
 
     const myTags = [
-        'JavaScript', 'CSS', 'HTML', 'C#', 'C++', 'React', 'git', 'API', 'Node.js', 'Canva', 'mongoDB', 'MySQL', 'jQuery', 'Azure', 'Unity'
+        'JavaScript', 'CSS', 'HTML', 'C#', 'C++', 'React', 'git', 'API', 'Node.js', 'Canva', 'mongoDB', 'MySQL', 'jQuery', 'Azure', 'express.js', 'Unity'
     ];
     var tagCloud = TagCloud('.content', myTags,{
         // radius in px
