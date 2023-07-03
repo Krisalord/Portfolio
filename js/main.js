@@ -256,14 +256,30 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
 				<p>If you are considering me for a project, I strongly suggest you to view them.</p>
 			</div>
 			<div id="myWorkListWrapper">
+                <div class="projectBox">
+					<h5>Portfolio Website</h5>
+					<p>A website to showcase my portfolio of completed projects</p>
+					<span>HTML, CSS, JavaScript</span>
+					<div>
+						<a href="https://arturmotin.netlify.app"><img src="./css/images/link.png"></a>
+						<a href="https://github.com/Krisalord/Portfolio"><img src="./css/images/folder.png"></a>
+					</div>
+				</div>
+                <div class="projectBox">
+					<h5>Social Network</h5>
+					<p>This is an Instagram type-website, details and case study are included with the project on GitHub!</p>
+					<span>JavaScript, CSS, EJS</span>
+					<div>
+						<a href="https://klappsocial.cyclic.app/"><img src="./css/images/link.png"></a>
+						<a href="https://github.com/Krisalord/SocialNetworkProject"><img src="./css/images/folder.png"></a>
+					</div>
+				</div>
 			</div>
 		</div>
     `;
     firstSpan.insertAdjacentHTML('afterend', myWorkWrapper);
     checkPageSize()
     headerToSpan()
-
-    getData()
 })
 //Check page size when opening something from header
 function checkPageSize(){
@@ -361,28 +377,3 @@ document.addEventListener('touchmove', function (event){
       event.preventDefault();
     }
 }, { passive: false });
-//GET DATA ABOUT PROJECTS FROM THE API
-async function getData(){
-		try{
-			const response = await fetch(`https://naughty-fox-garment.cyclic.app/api`)
-			const data = await response.json()
-			console.log(data)
-            for(let project in data){
-                const singleProject = `
-                <div class="projectBox">
-					<h5>${data[project].name}</h5>
-					<p>${data[project].description}</p>
-					<span>${data[project].languages}</span>
-					<div>
-						<a href="${data[project].link}"><img src="./css/images/link.png"></a>
-						<a href="${data[project].github}"><img src="./css/images/folder.png"></a>
-					</div>
-				</div>`;
-                const mainBox = document.querySelector('#myWorkListWrapper')
-                mainBox.innerHTML += singleProject
-            }
-		}
-		catch(error){
-			console.log(error)
-		}
-}
