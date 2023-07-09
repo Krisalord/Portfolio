@@ -548,10 +548,8 @@ header{
 /*                   MY WORK BLOCK                      */
 /* **************************************************** */
 /* **************************************************** */
-#myWorkListWrapper{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+#myWorkTextWrapper{
+    min-width: 50%;
 }
 /* My Project Box */
 .projectBox{

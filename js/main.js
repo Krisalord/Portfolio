@@ -99,8 +99,7 @@ document.querySelector('#aboutMeOpen').addEventListener('click', function(){
         <div id="aboutMeTextWrapper" class="textWrapper">
             <h2 id="aboutMeHeader" class="mainHeader">About Me</h2>
             <p>I'm a software engineer based in Finland.</p>
-            <p>Solving roblems and using my skills to bring peoples dreams to reality is my passion.</p>
-            <p>In my free time that I don't spend with my friends and family - I code or learn how to do it better. My latest interests are web development, that i want to turn into a career, and game development!</p>
+            <p>I am passionate about coding and find immense joy in the process of bringing ideas to life through programming. Whether I'm solving complex problems or creating elegant designs, coding allows me to tap into my creativity and continuously learn and grow. It's a thrilling journey that keeps me motivated and inspired, and I am always excited to embark on new coding adventures.</p>
         </div>
         <div id="aboutMeAniWrapper">
             <span class="content"></span>
@@ -115,9 +114,14 @@ document.querySelector('#aboutMeOpen').addEventListener('click', function(){
     const myTags = [
         'JavaScript', 'CSS', 'HTML', 'C#', 'C++', 'React', 'git', 'API', 'Node.js', 'Canva', 'mongoDB', 'MySQL', 'jQuery', 'Azure', 'express.js', 'Unity'
     ];
-    var tagCloud = TagCloud('.content', myTags,{
+
+    let containerWidth = document.documentElement.clientWidth
+    let containerHeight = document.documentElement.clientHeight
+    let sphereRadius = Math.min(containerWidth, containerHeight) / 2.5
+
+    let tagCloud = TagCloud('.content', myTags,{
         // radius in px
-        radius: 300,
+        radius: sphereRadius,
         // animation speed
         // slow, normal, fast
         maxSpeed: 'fast',
@@ -140,9 +144,9 @@ document.querySelector('#skillsOpen').addEventListener('click', function(){
                 <div id="experienceWrapper" class="mainWrapper">
                     <div id="experienceTextWrapper" class="textWrapper">
                         <h2 id="experienceHeader" class="mainHeader">Skills & Experience</h2>
-                        <p>Since beginning of my journey as a freelance developer nearly 3 years ago, I've come along way in learning different technologies needed for web development to create products for both business and consumer use.</p>
-                        <p>I can create responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom web pages, and coding interactive layouts.</p>
-                        <p>I also have full stack developer experience working for a company developing android apps.</p>
+                        <p>Since the beginning of my programming journey I have used a lot of different technologies and languages, but right now I am focused mainly on backend web development.</p>
+                        <p>I can create responsive websites and web apps that are fast, easy to use, and built with best programming practices in mind.</p>
+                        <p>I also have full stack experience in android app development.</p>
                         <p>Visit my LinkedIn profile for mode details or just contact me.</p>
                     </div>
                     <div id="skillsVisualWrapper">
@@ -251,24 +255,16 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
     const myWorkWrapper = `
     <div id="myWorkWrapper" class="mainWrapper">
 			<div id="myWorkTextWrapper" class="textWrapper">
-				<h2 id="myWorkHeader" class="mainHeader">My Work</h2>
-				<p>Here are some examples or my past work!</p>
-				<p>If you are considering me for a project, I strongly suggest you to view them.</p>
+				<h2 id="myWorkHeader" class="mainHeader">KLapp project</h2>
+				<p>I like to showcase the best of my work, so this page will contain a detailed description of my latest project!</p>
 			</div>
 			<div id="myWorkListWrapper">
                 <div class="projectBox">
-					<h5>Portfolio Website</h5>
-					<p>A website to showcase my portfolio of completed projects</p>
-					<span>HTML, CSS, JavaScript</span>
-					<div>
-						<a href="https://arturmotin.netlify.app"><img src="./css/images/link.png"></a>
-						<a href="https://github.com/Krisalord/Portfolio"><img src="./css/images/folder.png"></a>
-					</div>
-				</div>
-                <div class="projectBox">
 					<h5>Social Network</h5>
-					<p>This is an Instagram type-website, details and case study are included with the project on GitHub!</p>
-					<span>JavaScript, CSS, EJS</span>
+					<p>Social Network Project</p><br>
+                    <h2>Description</h2><br>
+                    <p>This is my first big personal project. The goal was to create a social network web app that allowes people to share pictures, react to them by commenting and liking, and have a simple profile. While creating this project, I had to learn a lot of new libraries and how API's work in general, aswell as securing users data (password hashing, cookies etc).</p>
+					<span>JavaScript, CSS, EJS, nodeJS, Express</span>
 					<div>
 						<a href="https://klappsocial.cyclic.app/"><img src="./css/images/link.png"></a>
 						<a href="https://github.com/Krisalord/SocialNetworkProject"><img src="./css/images/folder.png"></a>
