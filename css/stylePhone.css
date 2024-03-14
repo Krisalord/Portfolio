@@ -474,7 +474,7 @@ header{
     background-color: gray;
     margin: 0.8rem 0;
 }
-#skillBar1{
+#skillBar1, #skillBar2, #skillBar3, #skillBar4, #skillBar5, #skillBar6, #skillBar7{
     margin-top: 2rem;
 }
 #skillBar1 footer div{
@@ -497,51 +497,15 @@ header{
     height: 1px;
     background-color: #00FFFF;
 }
-#skillBar4{
-    margin-bottom: 4rem;
+#skillBar5 footer div{
+    width: 65%;
+    height: 1px;
+    background-color: #FF6600;
 }
-/* EXP BOX */
-#expBoxes{
-    display: flex;
-    flex-direction: column;
-}
-@media screen and (min-width: 1000px){
-    #expBoxes{
-        display: flex;
-        flex-direction: row;
-    }
-}
-#box1{
-    display: flex;
-    flex-direction: column;
-    background: #2a2a2a;
-    padding: 1.5rem;
-    margin: 0 0 1rem 0;
-}
-#box2{
-    display: flex;
-    flex-direction: column;
-    background: #2a2a2a;
-    padding: 1.5rem;
-    margin: 1rem 0 0 0;
-}
-.expBox h4{
-    margin-top: 0;
-    margin-bottom: 0.8rem;
-    font-weight: 400;
-    font-size: 1.2rem;
-}
-.expBox p{
-    margin-bottom: 0;
-    margin-top: 0.8rem;
-    font-size: 1rem;
-    font-weight: 300;
-}
-.expBox span{
-    font-size: 0.9rem;
-    opacity: 80%;
-    font-weight: 300;
-    color: #ababab;
+#skillBar6 footer div{
+    width: 65%;
+    height: 1px;
+    background-color: #FF1493;
 }
 /* **************************************************** */
 /* **************************************************** */
@@ -618,4 +582,3 @@ header{
     background: #08fdd8;
     color: black;
 }
-/* Spinning cube in landing page */

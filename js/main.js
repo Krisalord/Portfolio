@@ -143,7 +143,7 @@ document.querySelector('#skillsOpen').addEventListener('click', function(){
     const skillsWrapper = `
                 <div id="experienceWrapper" class="mainWrapper">
                     <div id="experienceTextWrapper" class="textWrapper">
-                        <h2 id="experienceHeader" class="mainHeader">Skills & Experience</h2>
+                        <h2 id="experienceHeader" class="mainHeader">Skills</h2>
                         <p>Since the beginning of my programming journey I have used a lot of different technologies and languages, but right now I am focused mainly on backend web development.</p>
                         <p>I can create responsive websites and web apps that are fast, easy to use, and built with best programming practices in mind.</p>
                         <p>I also have full stack experience in android app development.</p>
@@ -151,32 +151,28 @@ document.querySelector('#skillsOpen').addEventListener('click', function(){
                     </div>
                     <div id="skillsVisualWrapper">
                         <div class="skillBar" id="skillBar1">
-                            <span>HTML & CSS</span>
+                            <span>Website and app design</span>
                             <footer><div></div></footer>
                         </div>
                         <div class="skillBar" id="skillBar2">
-                            <span>JAVASCRIPT</span>
+                            <span>JavaScript & TypeScript</span>
                             <footer><div></div></footer>
                         </div>
                         <div class="skillBar" id="skillBar3">
-                            <span>BACKEND & API</span>
+                            <span>SQL and NoSQL databases</span>
                             <footer><div></div></footer>
                         </div>
                         <div class="skillBar" id="skillBar4">
-                            <span>C#</span>
+                            <span>API design with NodeJS</span>
                             <footer><div></div></footer>
                         </div>
-                        <div id="box1" class="expBox">
-                            <h4>Software developer</h4>
-                            <span>AH-Talotekniikka</span>
-                            <span class="date">06.2022 - 01.2023</span>
-                            <p>Software developer for an android app.</p>
+                        <div class="skillBar" id="skillBar5">
+                            <span>Strong communication and leadership</span>
+                            <footer><div></div></footer>
                         </div>
-                        <div id="box2" class="expBox">
-                            <h4>Web developer</h4>
-                            <span>AUPwork</span>
-                            <span class="date">02.2023 - present</span>
-                            <p>Freelance fullstack web developer, I'm open for new clients!.</p>
+                        <div class="skillBar" id="skillBar6">
+                            <span>Java & Kotlin Android dev</span>
+                            <footer><div></div></footer>
                         </div>
                     </div>`;
     firstSpan.insertAdjacentHTML('afterend', skillsWrapper);
@@ -255,21 +251,25 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
     const myWorkWrapper = `
     <div id="myWorkWrapper" class="mainWrapper">
 			<div id="myWorkTextWrapper" class="textWrapper">
-				<h2 id="myWorkHeader" class="mainHeader">KLapp project</h2>
-				<p>I like to showcase the best of my work, so this page will contain a detailed description of my latest project!</p>
+				<h2 id="myWorkHeader" class="mainHeader">Experience</h2>
+				<p>On this page you can find all about my work experience as well as my personal projects. Code for personal projects can be found in GitHub.</p>
 			</div>
 			<div id="myWorkListWrapper">
+
                 <div class="projectBox">
 					<h5>Social Network</h5>
-					<p>Social Network Project</p><br>
-                    <h2>Description</h2><br>
-                    <p>This is my first big personal project. The goal was to create a social network web app that allowes people to share pictures, react to them by commenting and liking, and have a simple profile. While creating this project, I had to learn a lot of new libraries and how API's work in general, aswell as securing users data (password hashing, cookies etc).</p>
+					<p>Personal project</p>
+                    <p>Web application allowes people to share pictures, react to them by commenting and liking, and have a simple profile. Includes security measures and session info.</p>
 					<span>JavaScript, CSS, EJS, nodeJS, Express</span>
-					<div>
-						<a href="https://klappsocial.cyclic.app/"><img src="./css/images/link.png"></a>
-						<a href="https://github.com/Krisalord/SocialNetworkProject"><img src="./css/images/folder.png"></a>
-					</div>
 				</div>
+
+                <div class="projectBox">
+                    <h5>AH-Talotekniikka</h5>
+                    <p>Software Developer</p>
+                    <p>I was working on an Android application made for maintenance services in Finland.</p>
+                    <span>C#, Unity, NodeJS, Azure Database</span>
+                </div>
+                
 			</div>
 		</div>
     `;
@@ -373,3 +373,18 @@ document.addEventListener('touchmove', function (event){
       event.preventDefault();
     }
 }, { passive: false });
+
+
+
+// <div id="box1" class="expBox">
+//                             <h4>Software developer</h4>
+//                             <span>AH-Talotekniikka</span>
+//                             <span class="date">06.2022 - 01.2023</span>
+//                             <p>Software developer for an android app.</p>
+//                         </div>
+//                         <div id="box2" class="expBox">
+//                             <h4>Web developer</h4>
+//                             <span>AUPwork</span>
+//                             <span class="date">02.2023 - present</span>
+//                             <p>Freelance fullstack web developer, I'm open for new clients!.</p>
+//                         </div>
