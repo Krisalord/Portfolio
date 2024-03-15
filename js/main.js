@@ -257,7 +257,7 @@ document.querySelector('#myWorkOpen').addEventListener('click', function(){
 			<div id="myWorkListWrapper">
 
                 <div class="projectBox">
-					<h5>Social Network</h5>
+					<h5>KLapp Social</h5>
 					<p>Personal project</p>
                     <p>Web application allowes people to share pictures, react to them by commenting and liking, and have a simple profile. Includes security measures and session info.</p>
 					<span>JavaScript, CSS, EJS, nodeJS, Express</span>
